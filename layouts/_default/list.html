@@ -12,7 +12,7 @@
 
 {{ if gt $paginator.TotalPages 0 }}
 {{ range $index, $page := $paginator.Pages }}
-<article class="{{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}first-entry{{ else }}post-entry{{ end }}">
+<article class="{{ if and $.IsHome (eq $paginator.PageNumber 0) (eq $index 0) }}first-entry{{ else }}post-entry{{ end }}">
   <header class="entry-header">
     <h2>{{ .Title }}</h2>
   </header>
